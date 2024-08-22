@@ -3,6 +3,8 @@ import Mainlayout from "../Layout/Mainlayout/Mainlayout";
 import Errorpage from "../Pages/Errorpage/Errorpage";
 import Home from './../Pages/Home/Home/Home';
 import About from "../Pages/Shared/About";
+import SignIn from "../Pages/Auth/Login";
+import SignUp from "../Pages/Auth/SignUp";
 
 
 
@@ -22,9 +24,14 @@ export const router = createBrowserRouter([
         path:'about',
         element:<About></About>
       },
+    
       {
-        path:'contact',
-        element:<About></About>
+        path:'login',
+        element:<SignIn></SignIn>
+      },
+      {
+        path:'signup',
+        element:<SignUp></SignUp>
       }
      
     ],
