@@ -3,6 +3,7 @@ import { Slidebar } from '../Slidebar/Slidebar'
 import LatestProduct from './Latestproduct'
 import About from '../../Shared/About'
 import Bandproduct from './Bandproduct'
+import Feedback from './Feedback'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
     <LatestProduct/>
     <Bandproduct/>
     <About/>
+    <Feedback/>
     </>
   )
 }

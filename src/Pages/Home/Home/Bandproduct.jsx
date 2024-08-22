@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ image, brand, productName, price, originalPrice }) => (
   <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-    <a href="#">
+    <Link to="/product">
       <img src={image} alt={productName} className="h-80 w-72 object-cover rounded-t-xl" />
       <div className="px-4 py-3 w-72">
         <span className="text-gray-400 mr-3 uppercase text-xs">{brand}</span>
@@ -32,7 +33,7 @@ const ProductCard = ({ image, brand, productName, price, originalPrice }) => (
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   </div>
 );
 

@@ -6,6 +6,7 @@ import About from "../Pages/Shared/About";
 import SignIn from "../Pages/Auth/Login";
 import SignUp from "../Pages/Auth/SignUp";
 import Contact from "../Pages/Shared/Contact";
+import ProductCart from "../Pages/ProductCart/productCard";
 
 
 
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
       {
         path:'contact',
         element:<Contact></Contact>
+      },
+      {
+        path:'product',
+        element:<ProductCart></ProductCart>
       }
      
     ],
