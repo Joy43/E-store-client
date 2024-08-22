@@ -5,6 +5,7 @@ import Home from './../Pages/Home/Home/Home';
 import About from "../Pages/Shared/About";
 import SignIn from "../Pages/Auth/Login";
 import SignUp from "../Pages/Auth/SignUp";
+import Contact from "../Pages/Shared/Contact";
 
 
 
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path:'signup',
         element:<SignUp></SignUp>
+      },
+      {
+        path:'contact',
+        element:<Contact></Contact>
       }
      
     ],
