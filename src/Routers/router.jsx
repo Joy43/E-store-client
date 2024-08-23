@@ -96,7 +96,7 @@ element:<Cart></Cart>
         path: "updateItem/:id",
         element: <UpdateItem></UpdateItem>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://e-store-server-umber.vercel.app/product/${params.id}`),
       },
       {
         path: "allusers",
