@@ -10,6 +10,9 @@ import ProductCart from "../Pages/ProductCart/productCard";
 import Dashboard from "../Layout/Dashboad/Dahboad";
 import Cart from "../Pages/DashboadElement/Cart/Cart";
 import CheckoutForm from "../Pages/DashboadElement/payment/Cheackpayment/checkoutfrom";
+import PaymentHistory from "../Pages/DashboadElement/payment/paymentstory/paymentstory";
+import Payments from "../Pages/DashboadElement/payment/Payments/Payments";
+import CheackPayment from "../Pages/DashboadElement/payment/Cheackpayment/checkoutfrom";
 
 
 
@@ -64,7 +67,10 @@ element:<Cart></Cart>
      },
      {
       path:'payment',
-     element: <CheckoutForm></CheckoutForm>
+     element: <CheackPayment></CheackPayment>
+     },{
+      path:'paymentHistory',
+      element:<PaymentHistory/>
      }
       //----------- admin router-------------
      
