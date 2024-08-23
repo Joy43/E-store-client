@@ -37,13 +37,14 @@ import { FcFlowChart } from "react-icons/fc";
               <>
                 <li className="shadow-lg shadow-slate-300">
                   <NavLink
-                    to="/dashboard/adminHome"
+                    to="/dashboard/adminhome"
                     className="flex items-center space-x-2 hover:bg-purple-800 p-2 rounded"
                   >
                     <FaHome />
-                    <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Admin Home</span>
+                    <span className="text-sm font-medium  lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Admin Home</span>
                   </NavLink>
                 </li>
+                {/* --------iteam--------- */}
                 <li className="shadow-lg shadow-slate-300">
                   <NavLink
                     to="/dashboard/addItems"
@@ -59,12 +60,12 @@ import { FcFlowChart } from "react-icons/fc";
                     className="flex items-center space-x-2 hover:bg-purple-800 p-2 rounded"
                   >
                     <FaList />
-                    <span className="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Manage Items</span>
+                    <span className="text-sm font-medium  lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Manage Items</span>
                   </NavLink>
                 </li>
                 <li className="shadow-lg shadow-slate-300">
                   <NavLink
-                    to="/dashboard/users"
+                    to="/dashboard/allusers"
                     className="flex items-center space-x-2 hover:bg-purple-800 p-2 rounded"
                   >
                     <FaUsers />
@@ -77,34 +78,34 @@ import { FcFlowChart } from "react-icons/fc";
                 {/* --------------- User ----------------- */}
                 <li className="">
             <NavLink
-              to="dashboard/yearly"
+              to="/dashboard/userhome"
               className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gradient-to-r from-[#7367F0] to-[#9D94F4] rounded-xl m-2 shadow-lg pr-6"
             >
               <span className="inline-flex justify-center items-center ml-4">
-                <IoBarChartSharp className="w-5 h-5 text-blue-400"></IoBarChartSharp>
+                <FaHome className="w-5 h-5 text-blue-400"></FaHome>
               </span>
               <span className="ml-2 text-sm tracking-wide truncate">
-                Visualized Chart
+             User Home
               </span>
               <span className="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">
-                year
+               user
               </span>
             </NavLink>
           </li>
-          {/* ----------- chart summary------*/}
+          {/* ----------- Payment------*/}
           <li>
             <NavLink
-              to="/dashboard/chartsummary"
+              to="/dashboard/paymentHistory"
               className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gradient-to-r from-[#7367F0] to-[#9D94F4] rounded-xl m-2 shadow-lg pr-6"
             >
               <span className="inline-flex justify-center items-center ml-4">
                 <FcComboChart FcComboChart className="w-5 h-5"></FcComboChart>
               </span>
               <span className="ml-2 text-sm tracking-wide truncate">
-                chat summary
+               Payments
               </span>
               <span className="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-blue-500 bg-red-50 rounded-full">
-                summary
+              payment
               </span>
             </NavLink>
           </li>
@@ -121,11 +122,11 @@ import { FcFlowChart } from "react-icons/fc";
               Cart
               </span>
               <span className="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-blue-50 rounded-full">
-                topic
+        cart
               </span>
             </NavLink>
           </li>
-          {/* ------------ country filter component--------------- */}
+          {/* ------------ community--------------- */}
           <li>
             <NavLink
               to="dashboard/countryfilter"
@@ -135,10 +136,10 @@ import { FcFlowChart } from "react-icons/fc";
                 <FaLocationCrosshairs className="w-5 h-5 text-blue-500"></FaLocationCrosshairs>
               </span>
               <span className="ml-2 text-sm tracking-wide truncate">
-                Country Filter
+               community
               </span>
               <span className="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-blue-50 rounded-full">
-                country
+                cont
               </span>
             </NavLink>
           </li>

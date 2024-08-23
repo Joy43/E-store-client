@@ -45,13 +45,16 @@ const Navbar = memo(() => {
                             aria-haspopup="true"
                         >
                             <summary className="flex items-center justify-between gap-2 p-2 font-medium marker:content-none hover:cursor-pointer">
-                                <span className="flex gap-2">
-                                    <img
-                                        className="w-6 h-6 rounded-lg"
-                                        src="https://lh3.googleusercontent.com/a/AGNmyxbSlMgTRzE3_SMIxpDAhpNad-_CN5_tmph1NQ1KhA=s96-c"
-                                        alt="Prajwal Hallale"
-                                    />
-                                </span>
+                            <div className="relative">
+            <img
+                width={500}
+                height={500}
+                className="size-10 rounded-full bg-slate-500 object-cover"
+                src={user?.photoURL}
+                alt="avatar navigate ui"
+            />
+            <span className="absolute bottom-[2px] right-0 size-3 rounded-full border-[2px] border-white bg-green-500"></span>
+        </div>
                                 <svg
                                     className="w-5 h-5 text-gray-500 transition group-open:rotate-90"
                                     xmlns="http://www.w3.org/2000/svg"

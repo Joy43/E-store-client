@@ -13,6 +13,12 @@ import CheckoutForm from "../Pages/DashboadElement/payment/Cheackpayment/checkou
 import PaymentHistory from "../Pages/DashboadElement/payment/paymentstory/paymentstory";
 import Payments from "../Pages/DashboadElement/payment/Payments/Payments";
 import CheackPayment from "../Pages/DashboadElement/payment/Cheackpayment/checkoutfrom";
+import Manageproduct from "../Pages/DashboadElement/ManageProduct/Manageproduct";
+import AddItems from "../Pages/DashboadElement/AddItem/AddItem";
+import UpdateItem from "../Pages/DashboadElement/UpdateProduct/UpdateItem";
+import AllUsers from './../Pages/DashboadElement/AllUsers/Allusers';
+import Adminhome from "../Pages/DashboadElement/Adminhome/Adminhome";
+import Userhome from "../Pages/DashboadElement/Userhome/Userhome";
 
 
 
@@ -71,8 +77,36 @@ element:<Cart></Cart>
      },{
       path:'paymentHistory',
       element:<PaymentHistory/>
-     }
+     },
+     {
+      path:'userhome',
+      element:<Userhome/>
+     },
       //----------- admin router-------------
+     
+      {
+        path: "addItems",
+        element: <AddItems></AddItems>,
+      },
+      {
+        path: "manageProduct",
+        element: <Manageproduct></Manageproduct>,
+      },
+      {
+        path: "updateItem/:id",
+        element: <UpdateItem></UpdateItem>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/product/${params.id}`),
+      },
+      {
+        path: "allusers",
+        element: <AllUsers></AllUsers>,
+       
+      },
+      {
+        path:'adminhome',
+        element:<Adminhome></Adminhome>
+      }
      
     ],
   },
