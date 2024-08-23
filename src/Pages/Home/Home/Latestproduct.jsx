@@ -51,12 +51,12 @@ function LatestProduct() {
             </div>
 
             <motion.div
-              className={`relative mt-4 w-full h-64 rounded-lg overflow-hidden transition-all duration-500 ${hover ? 'bg-[#F60301]' : 'bg-[#1351D8]'}`}
+              className={`relative mt-4 w-fit h-64 rounded-lg overflow-hidden transition-all duration-500 ${hover ? 'bg-[#F60301]' : 'bg-[#1351D8]'}`}
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
             >
               <img
-                src="https://i.ibb.co/JFmR5RJ/1.png"
+                src="https://i.ibb.co/h295jrn/james-mckinven-tpu-Ao8g-Vs58-unsplash.jpg"
                 alt='microscope'
                 className='w-full h-full object-cover transition-opacity duration-500 hover:opacity-90'
               />
