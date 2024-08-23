@@ -7,6 +7,9 @@ import SignIn from "../Pages/Auth/Login";
 import SignUp from "../Pages/Auth/SignUp";
 import Contact from "../Pages/Shared/Contact";
 import ProductCart from "../Pages/ProductCart/productCard";
+import Dashboard from "../Layout/Dashboad/Dahboad";
+import Cart from "../Pages/DashboadElement/Cart/Cart";
+import CheckoutForm from "../Pages/DashboadElement/payment/Cheackpayment/checkoutfrom";
 
 
 
@@ -50,13 +53,18 @@ export const router = createBrowserRouter([
     path: "dashboard",
     element: (
       <>
-        <></>
+        <Dashboard></Dashboard>
       </>
     ),
     children: [
       // ------------- normal user routes -------------
      {
-
+path:'cart',
+element:<Cart></Cart>
+     },
+     {
+      path:'payment',
+     element: <CheckoutForm></CheckoutForm>
      }
       //----------- admin router-------------
      
