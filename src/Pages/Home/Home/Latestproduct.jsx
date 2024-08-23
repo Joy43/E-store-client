@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // Sample products data
 const products = [
@@ -73,6 +74,7 @@ function LatestProduct() {
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
     >
+      <Link to="/product">
       <div className='overflow-hidden rounded-2xl'>
         <img
           className='rounded-2xl w-full h-40 object-cover'
@@ -102,6 +104,8 @@ function LatestProduct() {
           <p className='text-md text-gray-800'>{product.price}</p>
         </div>
       </div>
+      
+      </Link>
     </motion.div>
   ))}
 </div>
