@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Helmet } from "react-helmet-async";
+
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -58,9 +58,7 @@ const SignUp = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bistro Boss | Sign Up</title>
-      </Helmet>
+    
       <div className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex justify-center items-center">
         <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-8">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Create an Account</h2>
@@ -126,10 +124,12 @@ const SignUp = () => {
             </div>
             <div className="form-group">
               <input
-                className="btn btn-primary w-full"
+                className="w-full h-12 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
                 type="submit"
                 value="Sign Up"
               />
+
+                         
             </div>
           </form>
           <p className="text-center text-sm text-gray-600 mt-4">

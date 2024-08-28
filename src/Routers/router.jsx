@@ -19,6 +19,7 @@ import UpdateItem from "../Pages/DashboadElement/UpdateProduct/UpdateItem";
 import AllUsers from './../Pages/DashboadElement/AllUsers/Allusers';
 import Adminhome from "../Pages/DashboadElement/Adminhome/Adminhome";
 import Userhome from "../Pages/DashboadElement/Userhome/Userhome";
+import PrivateRoute from "./Privaterouter";
 
 
 
@@ -62,7 +63,9 @@ export const router = createBrowserRouter([
     path: "dashboard",
     element: (
       <>
-        <Dashboard></Dashboard>
+       <PrivateRoute>
+       <Dashboard></Dashboard>
+       </PrivateRoute>
       </>
     ),
     children: [

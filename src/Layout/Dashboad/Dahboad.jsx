@@ -17,11 +17,9 @@ import useAdmin from "../../Hooks/useAdmin";
 // -------icon-------
 import { IoBarChartSharp } from "react-icons/io5";
 import { FcComboChart } from "react-icons/fc";
-import { FcPieChart } from "react-icons/fc";
+
 import { FaLocationCrosshairs } from "react-icons/fa6";
-import { SiSourceengine } from "react-icons/si";
-import { FcAreaChart } from "react-icons/fc";
-import { FcFlowChart } from "react-icons/fc";
+
   
   const Dashboard = () => {
     const [cart] = useCart();
@@ -175,8 +173,8 @@ import { FcFlowChart } from "react-icons/fc";
               </NavLink>
             </li>
           </ul>
-          <div className="p-4 text-center border-t border-purple-700">
-            © 2024 Dashboard
+          <div className="p-4 text-center border-t border-purple-300">
+            © 2024 E-Store
           </div>
         </div>
         {/*------------- Dashboard Content ------------------*/}

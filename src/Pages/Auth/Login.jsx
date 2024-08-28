@@ -34,7 +34,7 @@ export default function SignIn() {
     return (
         <div className="max-w-xl mx-auto bg-white p-8 m-6 shadow-lg rounded-lg dark:bg-zinc-900">
             <div className="flex flex-col lg:gap-8 sm:flex-row justify-between">
-                {/* Left side form */}
+                {/* -------------Left side form ---------------------------*/}
                 <div className="w-full sm:w-1/2 mb-8 sm:mb-0">
                     <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-6">Sign In</h2>
                     <form onSubmit={handleLogin}>
@@ -79,7 +79,7 @@ export default function SignIn() {
                         <Link to="#" className="text-blue-600 hover:underline ml-1">Reset it</Link>
                     </p>
                 </div>
-                {/* Right side content */}
+                {/*------------------ Right side content ---------------*/}
                 <div className="w-full sm:w-1/2 flex flex-col justify-center items-center">
                     <p className="text-lg text-center text-zinc-700 dark:text-zinc-300 mb-4">
                         Don't have an account? 
