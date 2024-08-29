@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Slidebar = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
   
   // Updated images
   const sliderImages = [
-    { img: "https://i.ibb.co/JFmR5RJ/1.png" },
-    { img: "https://i.ibb.co/8Nt8kHx/2.png" },
-    { img: "https://i.ibb.co/7CXJyQ8/3.png" },
-    { img: "https://i.ibb.co/vcfpMY8/4.png" },
-    { img: "https://i.ibb.co/T4GRPJJ/5.png" },
+    { img: "https://i.ibb.co/Lg5k5RQ/1.png" },
+    { img: "https://i.ibb.co/KLgQMht/2.png" },
+    { img: "https://i.ibb.co/Qv93RTv/3.png" },
+    { img: "https://i.ibb.co/k54TxrP/4.png" },
+    { img: "https://i.ibb.co/zmJc9dw/5.png" },
+    { img: "https://i.ibb.co/9vND6Ns/6.png" },
+    { img: "https://i.ibb.co/5Lcnsw7/7.png" },
+    { img: "https://i.ibb.co/r0WcjLn/8.png" },
   ];
 
   const prevSlider = () =>
@@ -22,13 +25,18 @@ export const Slidebar = () => {
       currentSlider === sliderImages.length - 1 ? 0 : currentSlider + 1
     );
 
+  useEffect(() => {
+    const autoSlide = setInterval(nextSlider, 3000); // Change image every 3 seconds
+    return () => clearInterval(autoSlide); // Clean up interval on component unmount
+  }, [currentSlider]);
+
   return (
-    <div className="max-w-6xl mx-auto h-[540px] md:h-[670px] flex flex-col xl:flex-row items-center overflow-hidden gap-5 lg:gap-10 relative">
+    <div className="max-w-6xl mx-auto h-[540px] md:h-[670px] flex flex-col xl:flex-row items-center overflow-hidden gap-5 lg:gap-10 shadow-lg p-2 shadow-green-200 relative">
       <div className="absolute w-full h-full flex items-center justify-between z-50 px-5">
-        {/* arrow left */}
+        {/*----------------- arrow left -------------------*/}
         <button
           onClick={prevSlider}
-          className="flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-8 md:h-8"
+          className="flex justify-center items-center bg-fuchsia-950 rounded-full w-6 h-6 md:w-8 md:h-8"
         >
           <svg
             viewBox="0 0 1024 1024"
@@ -53,7 +61,7 @@ export const Slidebar = () => {
         {/* arrow right */}
         <button
           onClick={nextSlider}
-          className="flex justify-center items-center bg-white rounded-full w-6 h-6 md:w-8 md:h-8"
+          className="flex justify-center items-center bg-fuchsia-950 rounded-full w-6 h-6 md:w-8 md:h-8"
         >
           <svg
             viewBox="0 0 1024 1024"
@@ -77,7 +85,7 @@ export const Slidebar = () => {
           </svg>
         </button>
       </div>
-      {/* slider container */}
+      {/*------------------- slider container --------------------*/}
       <div
         className="h-[540px] md:h-[670px] w-2/3 ml-auto relative ease-linear duration-300 flex items-center"
         style={{ transform: `translateX(-${currentSlider * 50}%)` }}

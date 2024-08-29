@@ -31,6 +31,7 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
         <div className="w-64 bg-purple-900 text-white flex flex-col">
           <div className="p-4 text-2xl font-bold">Dashboard</div>
           <ul className="menu p-4 flex-1 space-y-4">
+            {/* ------------admin------ */}
             {isAdmin ? (
               <>
                 <li className="shadow-lg shadow-slate-300">
@@ -42,6 +43,23 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
                     <span className="text-sm font-medium  lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Admin Home</span>
                   </NavLink>
                 </li>
+
+                <li>
+            <NavLink
+              to="/dashboard/cart"
+              className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gradient-to-r from-[#7367F0] to-[#9D94F4] rounded-xl m-2 shadow-lg pr-6"
+            >
+              <span className="inline-flex justify-center items-center ml-4">
+                <FaShoppingCart FaShoppingCart className="w-5 h-5"></FaShoppingCart>
+              </span>
+              <span className="ml-2 text-sm tracking-wide truncate">
+              Cart
+              </span>
+              <span className="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-blue-50 rounded-full">
+        cart
+              </span>
+            </NavLink>
+          </li>
                 {/* --------iteam--------- */}
                 <li className="shadow-lg shadow-slate-300">
                   <NavLink
@@ -110,7 +128,7 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
           {/* ------------cart--------------- */}
           <li>
             <NavLink
-              to="dashboard/cart"
+              to="/dashboard/cart"
               className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gradient-to-r from-[#7367F0] to-[#9D94F4] rounded-xl m-2 shadow-lg pr-6"
             >
               <span className="inline-flex justify-center items-center ml-4">
