@@ -112,10 +112,10 @@ const ProductCart = () => {
         </div>
       </section>
 
-      {/* Product Cards */}
+      {/*-------------- Product Cards --------------*/}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 m-10">
         {products.map((product) => (
-          <div key={product._id} className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+          <div key={product._id} className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md shadow-green-300">
             <a className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
               <img
                 className="object-cover"

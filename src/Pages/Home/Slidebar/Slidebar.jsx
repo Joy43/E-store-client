@@ -31,7 +31,7 @@ export const Slidebar = () => {
   }, [currentSlider]);
 
   return (
-    <div className="max-w-6xl mx-auto h-[540px] md:h-[670px] flex flex-col xl:flex-row items-center overflow-hidden gap-5 lg:gap-10 shadow-lg p-2 shadow-green-200 relative">
+    <div className="max-w-6xl mx-auto h-[540px] md:h-[670px] flex flex-col xl:flex-row items-center overflow-hidden gap-5 lg:gap-10 shadow-lg p-2 shadow-green-200 relative m-16">
       <div className="absolute w-full h-full flex items-center justify-between z-50 px-5">
         {/*----------------- arrow left -------------------*/}
         <button

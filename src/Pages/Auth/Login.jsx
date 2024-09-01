@@ -8,9 +8,49 @@ export default function SignIn() {
     const location = useLocation();
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
-
+    const { googleSignIn, facebookSignIn } = useAuth();
     const from = location.state?.from?.pathname || "/";
 
+    // -------------gooogle login-----------
+    const handleGoogleSignIn = () =>{
+        googleSignIn()
+        .then(result =>{
+            console.log(result.user);
+            const userInfo = {
+                email: result.user?.email,
+                name: result.user?.displayName
+            }
+            axiosPublic.post('/users', userInfo)
+            .then(res =>{
+                console.log(res.data);
+                navigate('/');
+            })
+        })
+    }
+
+    // ---------facebook login--------------
+    const handleFacebookSignIn = () => {
+        facebookSignIn()
+          .then(result => {
+            console.log(result.user);
+            const userInfo = {
+              email: result.user?.email,
+              name: result.user?.displayName
+            };
+            axiosPublic.post('/users', userInfo)
+              .then(res => {
+                console.log(res.data);
+                navigate('/');
+              });
+          })
+          .catch(error => {
+            Swal.fire('Login failed', 'Could not sign in with Facebook', 'error');
+            console.error(error);
+          });
+      };
+    
+
+    // -----------handle login with emil and password-----------------
     const handleLogin = async (event) => {
         event.preventDefault();
         setLoading(true);
@@ -92,7 +132,9 @@ export default function SignIn() {
                         </button>
                     </Link>
                     <p className="text-sm text-center text-zinc-600 dark:text-zinc-400 my-2">OR</p>
+                    {/* --------------facebbok login---------- */}
                     <button 
+                    onClick={handleFacebookSignIn}
                         className="w-full h-12 bg-blue-800 text-white rounded-lg text-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-900 transition-colors mb-4"
                     >
                         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -100,7 +142,13 @@ export default function SignIn() {
                         </svg>
                         Sign in with Facebook
                     </button>
+
+
+                    {/* -------------- google login---------- */}
+
+
                     <button 
+                    onClick={handleGoogleSignIn}
                         className="w-full h-12 bg-red-600 text-white rounded-lg text-lg font-semibold flex items-center justify-center gap-2 hover:bg-red-700 transition-colors"
                     >
                         <svg className="w-5 h-5 fill-current" viewBox="0 0 32 32">

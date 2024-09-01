@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import {
+  FacebookAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
@@ -23,23 +24,32 @@ const AuthProviders = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
-
+  const facebookProvider = new FacebookAuthProvider();
   const axiosPublic = useAxiosPublic();
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  // -----------sign in--------
   const signIn = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  // --------facebook login-----------
+  const facebookSignIn = () => {
+    setLoading(true);
+    return signInWithPopup(auth, facebookProvider);
+  }
+
+// --------google----------
   const googleSignIn = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
+  // --------logout----------
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
@@ -90,6 +100,7 @@ const AuthProviders = ({ children }) => {
     googleSignIn,
     logOut,
     updateUserProfile,
+    facebookSignIn,
   };
 
   // Add prop type validation

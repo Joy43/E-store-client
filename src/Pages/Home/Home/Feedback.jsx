@@ -30,13 +30,13 @@ const feedbackData = [
     role: "Web Developer",
     imageUrl: "https://images.unsplash.com/photo-1632910121591-29e2484c0259?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxjb2RlcnxlbnwwfDB8fHwxNzEwMTY0NjIzfDA&ixlib=rb-4.0.3&q=80&w=1080",
   },
-  // Add more feedback objects as needed
+  
 ];
 
 function Feedback() {
   return (
    <div>
-<h1 className='text-center m-6 justify-center font-semibold text-2xl'>Feedbak Our Client</h1>
+<h1 className='text-center m-6 justify-center font-semibold text-2xl'>Feedback Our Client</h1>
 <Marquee 
       gradient={false} 
       speed={50} 
